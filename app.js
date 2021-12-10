@@ -3,10 +3,10 @@ import { renderGoblin } from './render-utils.js';
 const goblinForm = document.querySelector('#goblin-form');
 const goblinDataSection = document.querySelector('#goblin-data-section');
 const defeatedGoblinSection = document.querySelector('#defeated-goblin-section');
-const defeatedGoblinCount = document.querySelector('defeated-goblin-count');
+const defeatedGoblinCount = document.querySelector('#defeated-goblin-count');
 const fighterContainer = document.querySelector('#fighter-container');
 
-console.log(goblinForm, goblinDataSection, defeatedGoblinSection, fighterContainer);
+console.log(goblinForm, goblinDataSection, defeatedGoblinSection, defeatedGoblinCount, fighterContainer);
 
 const goblinArray = [
     {
@@ -23,7 +23,6 @@ let goblinName;
 let goblinHP = 3;
 
 let defeatedGoblins = 0;
-let defeatedArray = [];
 let fighterHP = 13;
 // console.log(goblinArray, defeatedGoblinCount, fighterHP);
 
@@ -50,7 +49,7 @@ goblinForm.addEventListener('submit', (e) => {
 function displayGoblins() {
     // console.log(goblinArray);
     goblinDataSection.textContent = '';
-
+    defeatedGoblinCount.textContent = defeatedGoblins;
     for (let goblin of goblinArray) {
 
         const goblinEl = renderGoblin(goblin);
