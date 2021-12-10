@@ -1,18 +1,23 @@
-import { renderGoblin } from './render-utils.js';
+import { renderDefeated, renderGoblin } from './render-utils.js';
 
 const goblinForm = document.querySelector('#goblin-form');
 const goblinDataSection = document.querySelector('#goblin-data-section');
 const defeatedGoblinCount = document.querySelector('#defeated-goblin-count');
+const defeatedGoblinSection = document.querySelector('#defeated-goblin-section');
 const HP = document.querySelector('#fighter-hp');
 
 let goblinArray = [
     {
         goblinName: 'xoo',
-        goblinHP: 3
+        goblinHP: 1
     },
     {
         goblinName: 'xyy',
-        goblinHP: 3
+        goblinHP: 1
+    },
+    {
+        goblinName: 'xrr',
+        goblinHP: 1
     }
 ];
 
@@ -20,6 +25,7 @@ let goblinName;
 let goblinHP = 3;
 let defeatedGoblins = 0;
 let fighterHP = 13;
+let defeatedArr = [];
 
 goblinForm.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -68,12 +74,20 @@ function displayGoblins() {
                 alert(`You tried to strike ${goblin.goblinName} and missed, ${goblin.goblinName} has attacked you... but missed!!`);
             }
             if (goblin.goblinHP === 0) {
+                defeatedArr.push(goblin);
                 defeatedGoblins++;
             }
             displayGoblins();
         });
 
         goblinDataSection.append(goblinEl);
+    }
+
+    defeatedGoblinSection.textContent = '';
+    for (let defeated of defeatedArr) {
+        const defeatedEl = renderDefeated(defeated);
+        defeatedGoblinSection.append(defeatedEl);
+
     }
 }
 

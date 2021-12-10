@@ -20,3 +20,11 @@ export function renderGoblin(goblinData) {
     goblinContainer.append(goblinEmoji, goblinName, goblinHP);
     return goblinContainer;
 }
+
+export function renderDefeated(defeatedData) {
+    const defeated = document.createElement('span');
+    defeated.classList.add('defeated-goblin');
+    defeated.textContent = '☠️';
+
+    return defeated;
+}
