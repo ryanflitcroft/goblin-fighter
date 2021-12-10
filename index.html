@@ -20,49 +20,32 @@
         <section class="goblin-input-section">
             <form id="goblin-form">
               <label for="goblin-input">
-                <input name="name" id="goblin-input" placeholder="Call a goblin by name" autocomplete="off" required>
+                <input name="name" id="goblin-input" placeholder="Call a goblin by name" autocomplete="off" maxlength="8" required>
               </label>
               <button type="submit" form="goblin-form" value="submit">Invoke Goblin</button>
             </form>  
           </section>
 
           <section class="goblin-data-section" id="goblin-data-section">
-            <!-- goblinObjects be rendered in JS -->
-            <!-- <div class="goblin-container">
-              <span class="goblin">goblinObject.name</span>
-              <span class="goblin">goblinObject.HP</span>
-              <span class="goblin">emoji textContent</span>
-            </div> -->
-            <!-- -->
+
           </section>
 
           <section class="defeated-goblin-section">
             <h2>Defeated Goblins:</h3>
               <span id="defeated-goblin-count"></span>
             <div id="defeated-goblin-section">
-
+              <!-- HOW to add emoji here for each goblinObject.hp === 0? -->
             </div>
-            <!-- STRETCH defeatedGoblin rendered in JS -->
-            <!-- <div class="defeated-goblin-container">
-              <span id="defeated-goblin-count"></span>
-              <span></span>
-            </div> -->
-            <!-- -->
           </section>
 
           <section class="fighter-section">
-            <!-- STRETCH fighter rendered in JS -->
-            <div id="fighter-container">
-              <span class="fighter">🤠</span>
-              <span class="fighter">#HP#</span>
-            </div>
-            <!-- -->
+              <span class="fighter">🧝</span>
+              <span class="fighter" id="fighter-hp"></span>
           </section>
     </main>
     <footer>
 
     </footer>
-
     <script type="module" src="./app.js"></script>
 </body>
 

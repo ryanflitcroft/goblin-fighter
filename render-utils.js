@@ -20,7 +20,3 @@ export function renderGoblin(goblinData) {
     goblinContainer.append(goblinEmoji, goblinName, goblinHP);
     return goblinContainer;
 }
-
-export function renderFighter() {
-    
-}

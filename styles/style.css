@@ -46,6 +46,7 @@ input {
     cursor: pointer;
     text-align: center;
     font-family: 'elfreth',sans-serif;
+    margin: 0.5em;
 }
 
 button {
@@ -76,9 +77,8 @@ h2 {
 
 .fighter-section {
     grid-column: 1 / span 3;
-    grid-row: 3 / span 4;
+    grid-row: 3 / span 3;
 }
-
 
 .goblin-container {
     width: 65px; /* adjust me */
@@ -91,6 +91,14 @@ h2 {
     border: 2px ridge ghostwhite;
     border-radius: 1em;
     background: rgba(255, 240, 245, 0.185);
+}
+
+.fighter {
+    font-size: 7em;
+}
+
+#fighter-hp {
+    font-size: 3rem;
 }
 
 .goblin {
