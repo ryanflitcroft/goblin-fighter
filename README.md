@@ -39,7 +39,7 @@ git checkout -b workOnANewBranch
       *note*: by default, ```goblinObject.HP``` should be assign a value 3.
 
 ```html
-<section class="" id="goblin-input-section>
+<section class="goblin-input-section">
   <form id="goblin-form">
     <label for="goblin-input">
       <input name="goblin-input" id="goblin-input" required>
@@ -149,7 +149,7 @@ git checkout -b workOnANewBranch
 
     *Stretch Goal*:
 
-    * **renderDefeatedGoblin()**:
+    * **renderDefeatedGoblins()**:
 
     * **renderFighter()**:
 

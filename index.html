@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="./styles/home.css">
-    <title>Document</title>
+    <title>Goblin Fighter</title>
 </head>
 
 <body>
@@ -17,7 +17,42 @@
 
     </header>
     <main>
+        <section class="goblin-input-section">
+            <form id="goblin-form">
+              <label for="goblin-input">
+                <input name="goblin-input" id="goblin-input" required>
+              </label>
+              <button type="submit" form="goblin-form" value="submit">Submit</button>
+            </form>  
+          </section>
 
+          <section class="" id="goblin-data-section">
+            <!-- goblinObjects be rendered in JS -->
+            <div class="goblin-container">
+              <span class="goblin">goblinObject.name</span>
+              <span class="goblin">goblinObject.HP</span>
+              <span class="goblin">emoji textContent</span>
+            </div>
+            <!-- -->
+          </section>
+
+          <section class="" id="defeated-goblin-section">
+            <!-- STRETCH defeatedGoblin rendered in JS -->
+            <div class="defeated-goblin-container">
+              <span>#</span>
+              <span>💀</span>
+            </div>
+            <!-- -->
+          </section>
+
+          <section class="fighter-section">
+            <!-- STRETCH fighter rendered in JS -->
+            <div id="fighter-container">
+              <span class="fighter">🤠</span>
+              <span class="fighter">#HP#</span>
+            </div>
+            <!-- -->
+          </section>
     </main>
     <footer>
 
