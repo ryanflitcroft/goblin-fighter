@@ -5,7 +5,7 @@ const goblinDataSection = document.querySelector('#goblin-data-section');
 const defeatedGoblinCount = document.querySelector('#defeated-goblin-count');
 const HP = document.querySelector('#fighter-hp');
 
-const goblinArray = [
+let goblinArray = [
     {
         goblinName: 'xoo',
         goblinHP: 3
@@ -41,7 +41,17 @@ goblinForm.addEventListener('submit', (e) => {
 function displayGoblins() {
     goblinDataSection.textContent = '';
     defeatedGoblinCount.textContent = defeatedGoblins;
-    HP.textContent = `${fighterHP} hp`;
+    if (fighterHP === 0) {
+        gameOver();
+        alert('The goblins have defeated you.');
+        HP.textContent = 'Game Over';
+        setTimeout(() => {
+            HP.textContent = `${fighterHP} hp`;
+        }, 1500);
+    } else {
+        HP.textContent = `${fighterHP} hp`;
+    }
+
     for (let goblin of goblinArray) {
 
         const goblinEl = renderGoblin(goblin);
@@ -49,11 +59,11 @@ function displayGoblins() {
         goblinEl.addEventListener('click', () => {
             let strike = Math.floor(Math.random() * 10);
             if (strike > 4) {
-                alert(`You have struck ${goblin.goblinName}!!`);
                 goblin.goblinHP--;
+                alert(`You have struck ${goblin.goblinName}!!`);
             } else if (strike < 4) {
-                alert(`You tried to strike ${goblin.goblinName} and missed, ${goblin.goblinName} has attacked you!!`);
                 fighterHP--;
+                alert(`You tried to strike ${goblin.goblinName} and missed, ${goblin.goblinName} has attacked you!!`);
             } else {
                 alert(`You tried to strike ${goblin.goblinName} and missed, ${goblin.goblinName} has attacked you... but missed!!`);
             }
@@ -65,6 +75,24 @@ function displayGoblins() {
 
         goblinDataSection.append(goblinEl);
     }
+}
+
+function gameOver() {
+    goblinArray = [
+        {
+            goblinName: 'xoo',
+            goblinHP: 3
+        },
+        {
+            goblinName: 'xyy',
+            goblinHP: 3
+        }
+    ];
+    
+    goblinName = '';
+    goblinHP = 3;
+    defeatedGoblins = 0;
+    fighterHP = 13;
 }
 
 displayGoblins();
