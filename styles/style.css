@@ -7,10 +7,92 @@ body {
     --color4: ;
     --color5: ;
 
-    color: var(--color1);
+    color: ghostwhite;
+    font-family: 'elfreth',sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background: linear-gradient(#1d1d1d, #432d46, #666566);
+}
+
+header {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    letter-spacing: 0.25em;
+    text-shadow: 1px 1px 1px goldenrod;
 }
 
 main {
     width: 100%;
-    height: 100%;
+    height: 90%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    text-shadow: 1px 1px 1px black;
+}
+
+section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    cursor: pointer;
+    text-align: center;
+    font-family: 'elfreth',sans-serif;
+}
+
+button {
+    font-family: 'elfreth',sans-serif;
+}
+
+.goblin-input-section {
+    grid-column: 1 / span 4;
+    grid-row: 1 / span 1;
+}
+
+.goblin-data-section {
+    grid-column: 4 / span 1;
+    grid-row: 2 / span 5;
+    overflow-y: scroll;
+}
+
+.defeated-goblin-section {
+    grid-column: 1 / span 3;
+    grid-row: 2 / span 1;
+}
+
+.fighter-section {
+    grid-column: 1 / span 3;
+    grid-row: 3 / span 4;
+}
+
+
+.goblin-container {
+    width: 65px; /* adjust me */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5em;
+    cursor: crosshair;
+    border: 2px ridge ghostwhite;
+    border-radius: 1em;
+    background: rgba(255, 240, 245, 0.185);
+}
+
+.goblin {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+.emoji {
+    font-size: 2em;
 }
