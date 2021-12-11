@@ -23,7 +23,7 @@ let goblinArray = [
 
 let goblinName;
 let defeatedGoblins = 0;
-let fighterHP = 13;
+let fighterHP = Math.floor(Math.random() * (14 - 7) + 7);
 let defeatedArr = [];
 
 goblinForm.addEventListener('submit', (e) => {
