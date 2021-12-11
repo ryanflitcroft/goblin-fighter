@@ -22,7 +22,6 @@ let goblinArray = [
 ];
 
 let goblinName;
-let goblinHP = 3;
 let defeatedGoblins = 0;
 let fighterHP = 13;
 let defeatedArr = [];
