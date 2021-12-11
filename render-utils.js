@@ -21,7 +21,7 @@ export function renderGoblin(goblinData) {
     return goblinContainer;
 }
 
-export function renderDefeated(defeatedData) {
+export function renderDefeated() {
     const defeated = document.createElement('span');
     defeated.classList.add('defeated-goblin');
     defeated.textContent = '☠️';

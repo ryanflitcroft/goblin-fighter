@@ -9,15 +9,15 @@ const HP = document.querySelector('#fighter-hp');
 let goblinArray = [
     {
         goblinName: 'xoo',
-        goblinHP: 1
+        goblinHP: Math.ceil(Math.random() * 3)
     },
     {
         goblinName: 'xyy',
-        goblinHP: 1
+        goblinHP: Math.ceil(Math.random() * 3)
     },
     {
         goblinName: 'xrr',
-        goblinHP: 1
+        goblinHP: Math.ceil(Math.random() * 3)
     }
 ];
 
@@ -37,7 +37,7 @@ goblinForm.addEventListener('submit', (e) => {
 
     const goblinObject = {
         goblinName,
-        goblinHP
+        goblinHP: Math.ceil(Math.random() * 3)
     };
 
     goblinArray.push(goblinObject);
