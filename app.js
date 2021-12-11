@@ -103,7 +103,6 @@ function gameOver() {
     ];
     
     goblinName = '';
-    goblinHP = 3;
     defeatedGoblins = 0;
     fighterHP = 13;
 }
