@@ -1,16 +1,127 @@
 
 body {
+    color: ghostwhite;
+    font-family: 'elfreth',sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background: linear-gradient(#1d1d1d, #432d46, #666566);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+}
 
-    --color1: #3d3d3d;
-    --color2: ;
-    --color3: ;
-    --color4: ;
-    --color5: ;
-
-    color: var(--color1);
+header {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    letter-spacing: 0.25em;
+    text-shadow: 1px 1px 1px goldenrod;
 }
 
 main {
     width: 100%;
-    height: 100%;
+    height: 85%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    text-shadow: 1px 1px 1px black;
+}
+
+section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    cursor: pointer;
+    text-align: center;
+    font-family: 'elfreth', sans-serif;
+    margin: 0.5em;
+}
+
+button {
+    font-family: 'elfreth', sans-serif;
+}
+
+h2 {
+    margin: 0;
+}
+
+.goblin-input-section {
+    grid-column: 1 / span 4;
+    grid-row: 1 / span 1;
+}
+
+.goblin-data-section {
+    grid-column: 4 / span 1;
+    grid-row: 2 / span 4;
+    overflow-y: scroll;
+    justify-content: flex-start;
+}
+
+.defeated-goblin-section {
+    grid-column: 1 / span 3;
+    grid-row: 2 / span 1;
+}
+
+.fighter-section {
+    grid-column: 1 / span 3;
+    grid-row: 3 / span 3;
+    justify-content: flex-start;
+}
+
+.goblin-container {
+    width: 65px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5em;
+    cursor: crosshair;
+    border: 2px ridge ghostwhite;
+    border-radius: 1em;
+    background: rgba(255, 240, 245, 0.2);
+}
+
+.goblin-container:hover {
+    background: rgba(255, 240, 245, 0.3);
+}
+
+.fighter {
+    font-size: 7em;
+}
+
+#fighter-hp {
+    font-size: 3rem;
+}
+
+.goblin {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+.defeated {
+    display: none;
+}
+
+.emoji {
+    font-size: 2em;
+}
+
+@media only screen and (min-width: 500px) {
+    main {
+        width: 500px
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
 }

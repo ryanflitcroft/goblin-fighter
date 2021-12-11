@@ -9,20 +9,41 @@
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="./styles/home.css">
-    <title>Document</title>
+    <title>Goblin Fighter</title>
 </head>
 
 <body>
     <header>
-
+      <h1>Goblin Fighter</h1>
     </header>
     <main>
+        <section class="goblin-input-section">
+            <form id="goblin-form">
+              <label for="goblin-input">
+                <input name="name" id="goblin-input" placeholder="Call a goblin by name" autocomplete="off" maxlength="6" required>
+              </label>
+              <button type="submit" form="goblin-form" value="submit">Invoke Goblin</button>
+            </form>  
+          </section>
 
+          <section class="goblin-data-section" id="goblin-data-section">
+
+          </section>
+
+          <section class="defeated-goblin-section">
+            <h2>Defeated Goblins: <span id="defeated-goblin-count"></span></h3>
+            <div id="defeated-goblin-section">
+            </div>
+          </section>
+
+          <section class="fighter-section">
+              <span class="fighter">🧝</span>
+              <span class="fighter" id="fighter-hp"></span>
+          </section>
     </main>
     <footer>
 
     </footer>
-
     <script type="module" src="./app.js"></script>
 </body>
 
