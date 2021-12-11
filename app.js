@@ -105,6 +105,7 @@ function gameOver() {
     goblinName = '';
     defeatedGoblins = 0;
     fighterHP = 13;
+    defeatedArr = [];
 }
 
 displayGoblins();
