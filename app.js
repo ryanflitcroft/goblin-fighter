@@ -52,6 +52,7 @@ function displayGoblins() {
         HP.textContent = 'Game Over';
         setTimeout(() => {
             HP.textContent = `${fighterHP} hp`;
+            defeatedGoblinCount.textContent = defeatedGoblins;
         }, 1500);
     } else {
         HP.textContent = `${fighterHP} hp`;
